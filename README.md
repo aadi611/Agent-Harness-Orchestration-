@@ -33,3 +33,26 @@ The harness handles:
 2. 🔀 Multi-Agent Workflow Orchestrator
 
 Think Airflow + LangGraph for AI agents.
+
+
+workflow:
+  - researcher
+  - analyst
+  - coder
+  - reviewer
+  - reporter
+
+
+
+Research
+   ↓
+Analysis
+   ↓
+Implementation
+   ↓
+Review
+   ↓
+Final Output
+
+
+
