@@ -1,0 +1,18 @@
+rag-agent-harness/
+├── .env.example
+├── pyproject.toml
+├── requirements.txt
+├── README.md
+└── src/
+    └── rag_agent/
+        ├── __init__.py
+        ├── config.py
+        ├── state.py
+        ├── models.py
+        ├── prompts.py
+        ├── retriever.py
+        ├── tools.py
+        ├── nodes.py
+        ├── graph.py
+        ├── ingest.py
+        └── main.py
