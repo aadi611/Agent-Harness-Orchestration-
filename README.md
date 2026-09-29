@@ -44,15 +44,18 @@ workflow:
 
 
 
-Research
-   ↓
-Analysis
-   ↓
-Implementation
-   ↓
-Review
-   ↓
-Final Output
+Core Flow
 
+START
+  ↓
+PLANNER
+  ↓
+RETRIEVER / TOOL
+  ↓
+EXECUTOR
+  ↓
+CRITIC
+  ├── grounded → END
+  └── failed   → RETRY → PLANNER
 
 
