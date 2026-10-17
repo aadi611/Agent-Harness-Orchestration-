@@ -1,7 +1,6 @@
 # Agent Harness & Multi-Agent Workflow Orchestrator
-
+---
 A durable, policy-enforced runtime for multi-agent workflows. Think Airflow + LangGraph for AI agents: workflows are declared in YAML, compiled into a DAG, executed by a scheduler, and verified by a two-tier critic before anything is returned.
-
 ---
 
 ## Why this exists
