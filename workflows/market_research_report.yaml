@@ -1,0 +1,17 @@
+workflow: market_research_report
+budget: { max_usd: 2.00, max_tokens: 400000, max_seconds: 300, max_replans: 2 }
+nodes:
+  planner:    { model: strong, output: PlanDAG }
+  researcher: { model: small, tools: [search, fetch], parallel: 5, cache_ttl: 1h }
+  analyst:    { model: mid, deps: [researcher] }
+  coder:      { model: mid, tools: [sandbox], gate: tests_pass, deps: [analyst] }
+  reviewer:   { model: strong_alt, checks: [schema, citations, recompute, rubric] }
+  reporter:   { model: mid, deps: [reviewer] }
+edges:
+  reviewer:
+    pass: reporter
+    tool_error: retry_step
+    bad_output: rerun_step
+    bad_plan: planner(subtree)
+    budget_exhausted: human
+approvals: { side_effect_tools: required, timeout_action: deny }
