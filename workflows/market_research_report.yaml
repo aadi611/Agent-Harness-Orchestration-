@@ -15,3 +15,4 @@ edges:
     bad_plan: planner(subtree)
     budget_exhausted: human
 approvals: { side_effect_tools: required, timeout_action: deny }
+denials: {not_allowed_tools : banned, required_action: approve }
