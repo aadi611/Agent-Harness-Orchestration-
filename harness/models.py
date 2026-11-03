@@ -12,7 +12,6 @@ class Tier(str, Enum):
     MID = "mid"                # analysis, coding, reporting
     SMALL = "small"            # routing, classification, extraction
 
-
 class ModelSpec(BaseModel):
     provider: str
     name: str
